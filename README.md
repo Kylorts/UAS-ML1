@@ -18,6 +18,8 @@ Pengelolaan dan pemilahan sampah adalah isu lingkungan yang relevan di masyaraka
 
 Split 80% train / 20% test (stratified). Augmentasi (albumentations) dipakai untuk memperbanyak sekaligus **menyeimbangkan** data train menjadi 1000 gambar per kelas.
 
+**Link dataset:** https://drive.google.com/file/d/1tfbhtb1EdhTI1ZWPdyW5YWASzZjqSvIZ/view?usp=sharing
+
 ## Alur Program
 
 ```
@@ -41,7 +43,6 @@ UAS ML/
 ├── dataset/                     # raw → cleaned → deduplicated → standardized
 ├── Shuffle Net/                 # Tahap 2: notebook + model tiap arsitektur
 ├── Resnet18/
-├── Mobilenetv3Large/
 ├── MobilenetV3Small/
 ├── EfficientNetB0/
 ├── Resnet 50 + Random Forest/
@@ -86,6 +87,13 @@ UAS ML/
 
 ## 3. Cara Menjalankan Program
 
+### Tahap 0: Clone repository
+```bash
+git clone https://github.com/Kylorts/UAS-ML1.git
+cd UAS-ML1
+```
+Model terlatih (`.pt` / `.keras` / `.joblib`) sudah ikut dalam repository, sehingga **aplikasi demo (Tahap 3) bisa langsung dijalankan**. Dataset tidak disertakan di repository; unduh dari [link dataset](https://drive.google.com/file/d/1tfbhtb1EdhTI1ZWPdyW5YWASzZjqSvIZ/view?usp=sharing) bila ingin menjalankan preprocessing (Tahap 1) atau melatih ulang model (Tahap 2).
+
 ### Tahap 1: Preprocessing data
 ```bash
 cd Prepocessing_local
@@ -104,7 +112,7 @@ cd Streamlit_Demo
 pip install -r requirements.txt
 streamlit run app.py
 ```
-Aplikasi terbuka di `http://localhost:8501`.
+Aplikasi terbuka di `http://localhost:8501`. Karena model sudah tersedia di repository, tahap ini dapat langsung dijalankan setelah clone tanpa perlu mengunduh dataset.
 
 ## 4. Tampilan Hasil Program
 
@@ -122,19 +130,4 @@ Aplikasi menampilkan: dropdown pemilih model + akurasi test model, area upload g
 
 ## 6. Link GitHub
 
-> https://github.com/username/klasifikasi-sampah  *(ganti dengan link repository kamu)*
-
----
-
-## Kriteria Bonus yang Dipenuhi
-
-- ✅ Dataset isu relevan di masyarakat (pengelolaan sampah)
-- ✅ Data augmentation (albumentations)
-- ✅ Hyperparameter tuning (Optuna pada Random Forest)
-- ✅ Transfer learning (ResNet, MobileNet, EfficientNet, ShuffleNet)
-- ✅ Penanganan data tidak seimbang (augmentasi ke jumlah seimbang per kelas)
-- ✅ Tampilan aplikasi (Streamlit)
-- ✅ Demo prediksi input baru (upload gambar)
-- ✅ Interpretasi model (Grad-CAM & feature-importance CAM)
-- ✅ GitHub dengan README lengkap
-- ✅ Perbandingan lebih dari 5 model
+> https://github.com/Kylorts/UAS-ML1
