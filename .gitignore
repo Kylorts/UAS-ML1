@@ -1,0 +1,75 @@
+# ============================================================
+# Repo ini hanya berisi PROGRAM (kode). Dataset, gambar, model,
+# jurnal, dan laporan TIDAK dimasukkan ke Git.
+# ============================================================
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# ===== Virtual environment =====
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+Prepocessing_local/venv/
+Streamlit_Demo/venv/
+
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*.bak
+*-checkpoint.ipynb
+
+# ===== OS & editor =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# ===== Microsoft Office temp files =====
+~$*.docx
+~$*.xlsx
+~$*.pptx
+~WRL*.tmp
+
+# ===== Streamlit cache =====
+.streamlit/
+Streamlit_Demo/cam_stats.npz
+
+# ===== File internal / sementara =====
+_figcheck/
+
+# ===== Dataset =====
+dataset/
+*/dataset/
+Streamlit_Demo/dataset/
+
+# ===== Gambar (semua visualisasi, diagram, contoh citra) =====
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+visualisasi/
+arsitektur/
+alur_penelitian.drawio
+
+# ===== Laporan & dokumen =====
+*.docx
+*.pptx
+*.pdf
+Jurnal/
+
+# Catatan: model terlatih (*.pt, *.keras, *.joblib, *.h5) sengaja
+# DIIKUTKAN ke Git agar demo Streamlit bisa langsung dijalankan.
